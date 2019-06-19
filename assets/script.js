@@ -132,16 +132,24 @@ var view = {
             var todoTextWithCompletion = '';
 
             if (todoList.todos[i].completed){
-                todoTextWithCompletion = `(x) ${todoList.todos[i].todoText}`
+                todoTextWithCompletion = `(x) ${todoList.todos[i].todoText}}`
                
             } else {
                 todoTextWithCompletion = `(  ) ${todoList.todos[i].todoText}`
                
             }
 
+            todoLi.id = i;
             todoLi.textContent=todoTextWithCompletion;
+            todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi)
         }
+    },
+    createDeleteButton: function(){
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'deleteButton';
+        return deleteButton;
     }
 };
 
