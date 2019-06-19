@@ -153,10 +153,15 @@ var view = {
     }
 };
 
-todoList.addTodos("Korean BBQ");
-todoList.addTodos("Kimchee");
-todoList.addTodos("Burgers");
-todoList.toggleCompleted(1);
+var todosUl = document.querySelector('ul');
+todosUl.addEventListener('click', function(event){
+    console.log(event.target.parentNode.id)
+})
+
+// todoList.addTodos("Korean BBQ");
+// todoList.addTodos("Kimchee");
+// todoList.addTodos("Burgers");
+// todoList.toggleCompleted(1);
 
 
 
