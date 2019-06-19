@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watch and Code Todo</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="jumbotron">
+            <h1 class="text-center">Todo List</h1>
+            <div>
+                <button onclick="handlers.displayTodos()">Display All Todos</button>
+                <button onclick="handlers.toggleAll()">ToggleAll</button>
+            </div>
+            <div>
+                <button onclick="handlers.addTodo()">Add ToDo</button>
+                <input type="text" placeholder="Enter New Todo" id="addTodoTextInput" required>
+            </div>
+            <div>
+                <button onclick="handlers.changeTodo()">Change Todo</button>
+                <input id="changeTodoPositionInput" type="number" placeholder="Position">
+                <input id="changeTodoTextInput" type="text" placeholder="New Todo">
+            </div>
+            <div>
+                <button onclick="handlers.deleteTodo()">Delete</button>
+                <input id="deleteTodoPositionInput" type="number">
+            </div>
+            <div>
+                <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+                <input id="toggleCompletedPositionInput" type="number">
+            </div>
+            <ul>
+                <div class="action"></div>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
